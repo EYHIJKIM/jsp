@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{box-sizing: border-box;}
+	#wrap{
+		display: flex; flex-flow: column;
+		width:500px; height:500px;
+		border: 3px solid black;
+		text-align:center;
+		margin:0 auto;
+	}
+	
+	.a{
+		height:20%; width:100%;
+		background-color:red;
+		border:2px solid black;
+		padding-top: 5px;
+	}
+	
+	
+	
+	.b{
+		height:60%;
+		display: flex; flex-flow: row;
+		border:2px solid black;	
+	}
+	
+	.bnav{
+		padding-top: 15px;
+	}
+	
+	.baside{
+		padding-top: 15px;
+	}
+	
+	.bh1{border:2px solid black;
+		width:10%;
+		background-color: rgb(255, 255, 128);
+	
+	}
+	
+	.bh2{border:2px solid black;
+		width:70%;
+		background-color: green;
+		display:flex; flex-flow: column;
+		margin:0 auto;
+
+		
+	}
+	
+	.bh3{border:2px solid black;
+		width:20%;
+		background-color: yellow;
+		
+	}
+	
+	.c{border:2px solid black;
+		height:20%; width:100%;
+		background-color: pink;
+	}
+	
+	.cfooter{
+		padding-top: 15px;
+	}
+	
+	
+	
+	.bbh1{
+		margin:15px;
+		background-color: green;
+		padding-left:20px;
+		height:30px;
+
+	}	
+	
+
+	.bbh2{
+		margin:15px;
+		border:2px solid black;
+		background-color: skyblue;
+		height:30px;
+		padding-left:20px;
+	}
+	
+	.bbh3{
+		margin:15px;
+		border:2px solid black;
+		background-color: pink;
+		height:30px;
+		padding:0 0 0 20px;
+	}
+
+	.bbh4{
+		margin:15px;
+		border:2px solid black;
+		background-color: lightgreen;
+		height:30px;
+		padding:0 0 0 20px;
+	}
+
+</style>
+
+</head>
+<body>
+	<div id="wrap">
+		<div class="a"><h1>&#60;header&#62;</h1></div>
+		<div class="b" align="center">
+			<div class="bh1">
+				<div class="bnav">&#60;nav&#62;</div>
+			</div>
+			<div class="bh2">
+				<div class="bbh1">&#60;section1&#62;</div>
+				<div class="bbh2">header</div>
+				<div class="bbh3">article</div>
+				<div class="bbh4">footer</div>
+				
+			</div>
+			<div class="bh3">
+				<div class="baside">&#60;aside&#62;</div>
+			</div>
+		
+		</div>	
+		<div class="c">
+			<div class="cfooter">&#60;footer&#62;</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

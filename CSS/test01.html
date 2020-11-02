@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="test.css"></link>
+<style type="text/css">
+	/*
+	*{
+		color:red;
+		background-color:yellow;
+		font-size:50px;
+	}
+	*/
+	
+	
+	a:link{ color:pink; text-decoration: none; }
+	a:visited { color:red; }/*방문했던 사이트*/
+	a:hover { text-decoration:underline; color:black; }
+	a:active { background-color: yellow; }
+	
+	
+	
+	.div{
+		width:200px; height: 100px; color:blue;
+		background-color: green; opacity: 0.9;
+	
+	}
+	
+	.div:hover{
+		width:400px; height:50px; color:red; opacity: 0.5;
+		background-color: yellow; transition: all 1.5s linear 0.5s 
+	}
+	
+	ul li{ list-style: none; display: inline; padding:20px;}
+	/* padding:20px;(위,오른,아래,왼); 
+			  :20px 20px(위아래,왼오른)
+			  
+			  */
+	div{
+		overflow:auto; 
+		background-color:blue; height:100px;
+	}
+	div div{ background-color: red; width:200px; height:200px; }
+	
+
+</style>
+</head>
+<body>
+	
+	<div>
+		hello
+		<div>css</div>
+	</div>
+
+
+
+
+
+
+
+
+
+	<ul>
+		<li>순서가 없다</li>
+		<li>리스트 이다</li>
+	</ul>
+
+
+	<div class='div'>
+		가상 클래스를 이용한 애니메이션 효과
+		<br>마우스가 위에 있으면 박스가 늘어남
+	</div>
+
+
+
+	<a href="www.naver.com">test</a>
+	<a href="#">test</a>
+	<p>link : 웹 문서에서 사용자가 방문하지 않았던 곳을 표시</p>
+	<p>visited : 웹 문서에서 사용자가 방문한 곳을 표시</p>
+	<p>hover : 웹 문서에서 사용자가 링크에 마우스 포인터를 올리는 순간</p>
+	<p>active : 웹 문서에서 사용자가 링크를 클릭하는 순간</p>
+
+<hr>
+
+	<h1>전체 스타일 적용</h1>
+	<p>모든 데이터에 적용</p>
+	<b class="class01">클래스 선택자 적용</b>
+	<h3 class="class01">클래스 선택자 적용</h3>
+	
+	<b id="id01">id 선택자 적용</b>
+	<h3 id="id01">id 선택자 적용</h3>
+</body>
+</html>

@@ -1,0 +1,9 @@
+h1, p { background-color: green;}
+	p { color:red; font-size:50px }
+	
+	.class01 {color: blue; background-color: pink;}
+	h3.class01{ color: red; background-color: green;}
+	
+	
+	#id01{ color:blue; background-color:pink; }
+	h3#id01{ color:red; background-color:green; }
