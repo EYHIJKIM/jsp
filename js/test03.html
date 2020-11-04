@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+	/*
+		function getGrade(num){
+			kor = 95+num;
+			return kor;
+		}
+		
+		getKor = getGrade(100)
+		document.write('return:'+getKor)
+	*/
+		
+		
+	/*
+	function add(){ sum=1; return sum;}
+	function add(x){ sum=1+x; return sum;}
+	function add(x,y){ sum=1+x+y; return sum;}
+	function add(x,y,z){ sum=1+x+y+z; return sum;}
+	function add(x,y,z,y){ sum=1+x+y+z; return sum;}
+	
+	document.write('인자 없음 : '+add()+"<br>")
+	document.write('인자 1 : '+add(1)+"<br>")
+	document.write('인자 2,3 : '+add(2,3)+"<br>")
+	document.write('인자 4,5,6 : '+add(4,5,6)+"<br>")
+	document.write('인자 7,8,9,10 : '+add(7,8,9,10)+"<br>")
+	*/
+	
+	/*
+	function add(x,y){
+		console.log(x)
+		console.log(y)
+		if(y==undefined){
+			return x+10;
+		}
+		return x+y;
+	}
+	document.write(add(1)+"<br>")
+	document.write(add(1,2))
+	*/
+	
+	function add(){
+		for(i=0; i<arguments.length; i++){
+			document.write("argument : "+arguments[i]+"<br>")
+		}
+		document.write("<hr>")
+	}
+	
+	add(1)
+	add(1,2,3,4)
+	add(12,12,12,12,12,123)
+		
+		
+	</script>
+
+</body>
+</html>
