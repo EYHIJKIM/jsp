@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{display: flex; flex-flow: row}
+	input{
+		width:40px; height:40px;
+		margin:55px 0 0 0;
+	}
+</style>
+
+<script src="quiz.js"></script>
+	<script type="text/javascript">
+		var myImg;
+		function mOverStopPic(obj){//사진위에 마우스 올릴 시
+			clearInterval(myImg)
+		}	
+
+		function autoPicNext(){			
+			myImg=setInterval(next,1000)
+		}	
+	
+		
+	</script>
+
+
+</head>
+<body onload="autoPicNext()">
+<div>
+
+	<input type="image" src="../CSS/resources/images/왼쪽화살표.jpg" 
+	 	onclick="previous()">
+	<img id="img" src="../CSS/resources/images/test1.jpg" 
+		width="150px" height="150px"
+		onmouseover="mOverStopPic(this)" onmouseout="autoPicNext()"> 
+	
+	<input type="image" src="../CSS/resources/images/오른쪽화살표.jpg"
+		onclick="next()" >
+	
+</div>
+</body>
+</html>
