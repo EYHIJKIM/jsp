@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--  
+	<p id="d1"></p>
+	<p id="d2"></p>
+	<p id="d3"></p>
+-->
+
+	<div id="digClock"></div>
+	<button onclick="digClock()">시작</button>
+	<button onclick="endClock()">종료</button>
+
+<hr>
+	<p id="demo"></p>
+	<button onclick="mystart()">start</button>
+	<button onclick="mystop()">stop</button>
+	<script type="text/javascript">
+		var mytime;
+		function mystart(){
+			mytime = setInterval(settime, 1000);
+		}
+		function mystop(){
+			clearInterval(mytime)
+		}
+		function settime(){
+			da = new Date()
+			document.getElementById('demo').innerHTML 
+				= da.toLocaleTimeString()
+		}
+		
+		
+		var e;
+		function digClock(){
+			var today = new Date() //현재 시간 얻어오기
+			date = today.getFullYear()+"년"+ //이 값을 년월일시..로 출력
+				(today.getMonth()+1)+"월"+
+				today.getDate()+"일"+
+				today.getHours()+"시"+
+				today.getMinutes()+"분"+
+				today.getSeconds()+"초"
+			document.getElementById("digClock").innerHTML = date
+			e = setTimeout('digClock()', 1000)
+		}
+		
+		function endClock(){
+			clearTimeout(e)	
+		}
+		
+		
+/*
+		var today = new Date()
+		document.getElementById("d1").innerHTML 
+		= today.getFullYear()+"년"
+		document.getElementById("d2").innerHTML 
+		= today.getMonth()+1+"월" +today.getDate()+"일"
+	
+		document.getElementById("d3").innerHTML
+		= today.getHours()+"시"+today.getMinutes()+"분"
+		+today.getSeconds()+"초"
+		
+		*/
+	</script>
+
+</body>
+</html>
