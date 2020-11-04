@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script src="test.js"></script>
+	<script type="text/javascript">
+		var num=0
+		document.write("실행: "+num+"<br>")
+		num = "test"
+		document.write("실행 ':' "+num);
+		document.write("<div style='color:red;'>자바스크립트 파일</div>");
+		
+	</script>
+
+	<script>
+		function test(){
+			alert('test 메소드 클릭')	
+		}
+	
+	</script>
+	
+	<script type="text/javascript">
+		grade = prompt('입력')
+		document.write('입력 값:'+grade)
+	</script>
+
+
+</body>
+	<input type="button" onclick="alert('인풋 클릭')" value="클릭">
+	<button type="button" onclick="alert('버튼 클릭')">클릭</button>
+	<button type="button" onclick="test()">호출</button>
+	
+	<button type="button" onclick="test1()">test1</button>
+	<button type="button" onclick="test2()">test2</button>
+</html>
