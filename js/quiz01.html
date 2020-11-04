@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS퀴즈1</title>
+</head>
+<body>
+
+<script src="quiz.js"></script>
+<script type="text/javascript">
+	document.write("※본인의 이름 나이 주소를 입력 받아 출력 하시오.<br>")
+	nameInput();
+	address=prompt(name+'님의 주소는?')
+	age=prompt(name+'님의 나이는?')
+	
+	document.write("※당신의 이름은?"+name+"<br>")
+	document.write("※"+name+"님의 나이는?<br>")
+	document.write("※"+name+"님의 주소는?<br>")
+	
+	document.write("<table border=1><tr><th>이름</th><th>나이</th><th>주소</th></tr><td>"+name+"</td><td>"+age+"</td><td>"+address+"</td></tr></table>")
+	
+</script>
+
+
+</body>
+</html>
