@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	#wrap{
+		display: flex; flex-flow: column;
+		width: 700px; height: 600px;
+		margin:0 auto;
+	}
+	
+	ul{
+		list-style: none;
+				
+	}
+	
+	li{
+		display:inline;
+		color:white;
+		padding:15px;
+	}
+	
+	img{padding:5px;}
+	
+	p{
+		display: flex; flex-flow:row;
+	}
+	
+	span{
+		padding:15px;
+	}
+
+	.header{
+
+		display:flex; felx-flow: row;
+		height:20%;	
+	}
+	
+	.hLetter{
+		padding-left: 100px;
+	}
+	
+	.hImg{
+		width: 80px; height: 80px;
+	}
+	.menu{
+		background-color: grey;
+		height:7%;
+	
+	}
+	
+	.main{
+		display:flex; felx-flow: row;
+		height:50%;
+	}
+
+	.m1{
+		display: flex; flex-flow: column;
+		padding:5px;
+	}
+	.m2{
+		width:50%;
+
+	}
+
+	.m3{
+		
+		width:35%;
+		padding:10px;
+	}
+	
+
+	.mLoginButton{
+		display:flex; felx-flow:row;
+		height:53px;width:50px;
+	}
+	
+	
+	.footer{
+		height:10%;
+	}
+
+
+	@media all and (min-width:960px){
+	
+	
+	
+	
+	
+	
+	
+	}
+
+</style>
+
+</head>
+<body>
+
+<div id="wrap">
+	<div class="header" >
+		<img class="hImg" src="media/top.jpg">
+		<h1 class="hLetter" style="font-style: italic">맛집탐방 이야기 ^^</h1>
+		
+	</div>
+	
+	<div class="menu">
+		<ul>
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">게시판</a></li>
+			<li><a href="#">내정보</a></li>
+		</ul>
+	
+	</div>
+	
+	<div class="main">
+		<div class="m1">
+			<img src="media/min.jpg" width="100px" height="130px">
+			<img src="media/puppy.jpg" width="100px" height="130px">
+		</div>
+		
+		<div class="m2">
+			<h3><오늘의 맛집></h3>
+			<p>오늘 방문한 곳은 맛있는 음식이 나오는 집.
+				<img src="media/salmon.jpg" width="50px" height="50px">
+			</p>
+			<p>오늘 방문한 곳은 맛있는 음식이 나오는 집.
+				<img src="media/mak.jpg" width="50px" height="50px">
+			</p>
+			<p>오늘 방문한 곳은 맛있는 음식이 나오는 집.
+				<img src="media/galbe.jpg" width="50px" height="50px">
+			</p>
+		</div>
+		
+		<div class="m3">
+			<div class="mLoginButton">
+				<div>
+					<input type="text" name="id" style="width:120px; height:20px">
+					<input type="password" name="pwd" style="width:120px; height:20px">
+				</div>
+				
+				<input type="submit" value="로그인">	
+						
+			</div>
+			<a href="#">회원가입</a> / <a href="#">ID/PW찾기</a>
+			
+			<br><br><br><br><br>
+			<h3>오늘의 뉴스</h3>
+			날씨:-32도<br>
+			미세먼지:농도심함<br>
+			운세: 누구 보다 좋음
+		</div>
+	
+	</div>
+	
+
+	
+	
+	<div class="footer">
+		<hr>
+		<span style="font-style:italic;
+			"> <span style="color:lime;font-weight: bold;">CARE LAB</span>
+		Copyright &copy; AllRights Reserved
+		</span>
+	 	<span>1999 | 회사소개 | TEL:777-7777</span>
+	</div>
+
+
+</div>
+
+
+
+</body>
+</html>
