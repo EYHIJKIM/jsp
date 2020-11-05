@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사진 테이블</title>
+	<style type="text/css">
+		img{height: 100px;width: 100px;}
+		
+		p{
+			margin:5px
+			height : 70px; width: 100px;
+			font-weight: bold;
+			font-size: 1.2em;
+			
+		}
+				
+		.picList{
+			display: flex; flex-flow: column;
+		}
+		
+		.alert{
+			display: flex; flex-flow: column;
+		}
+		
+		.div{
+			display:flex; flex-flow: row;
+		}
+		
+		
+	</style>
+	
+	<script type="text/javascript">
+		var txt
+		function textBasic(){
+			txt = document.getElementById('txtBox')
+			txt.style.backgroundColor = 'red'
+			
+		}
+	
+		function textChange(){
+			txt = document.getElementById('txtBox')
+			txt.style.backgroundColor = 'lime'
+			txt.innerHTML = "최근 구경한 상품"
+		}
+	
+		var img;
+		var picList = []  //오른쪽에 나열될 사진 리스트
+		var tmpImg;
+		
+		
+		var Allpicture = ["resources/images/최근상품01.jpg","resources/images/최근상품02.jpg",
+			"resources/images/최근상품03.jpg","resources/images/최근상품04.jpg",
+			"resources/images/최근상품05.jpg","resources/images/최근상품06.jpg",
+			"resources/images/최근상품07.jpg","resources/images/최근상품08.jpg"]
+		
+		var i=0;
+		
+		
+		function picTable(){
+			
+		
+		}
+		
+		
+		function picAdd(idx){	
+			textChange()
+			console.log(picList.length)
+			
+			img = document.createElement('img')
+			img.setAttribute('src', Allpicture[idx]) //이미지 세팅
+	
+			
+			//4개일때는 그냥 평소대로 추가.
+			if(picList.length<5){
+				picList[i] = img
+				i++
+				document.getElementById('pic').appendChild(img)
+				
+			} else{	//5개면		
+				tmpImg = picList[0]
+				
+				picList.shift() //앞에꺼 삭제
+				picList.push(img) //뒤에 추가
+				
+				//clear시키고 배열로 뽑아낸다.
+				
+				document.getElementById('pic').removeChild(tmpImg)
+				document.getElementById('pic').appendChild(img)
+				
+
+			}
+		
+		}
+		
+		
+
+	
+	</script>
+
+</head>
+<body onload='textBasic()'>
+<div class="div">
+	<table border=1 align=center >
+		<tr>
+			<td>
+				<img src="resources/images/최근상품01.jpg" id=0 onclick="picAdd(0)">
+			</td>
+			<td><img src="resources/images/최근상품02.jpg" id=1 onclick="picAdd(1)"></td>
+			<td><img src="resources/images/최근상품03.jpg" id=2 onclick="picAdd(2)"></td>
+			<td><img src="resources/images/최근상품04.jpg" id=3 onclick="picAdd(3)"></td>
+			
+		</tr>
+		<tr>
+			<td><img src="resources/images/최근상품05.jpg" onclick="picAdd(4)"></td>
+			<td><img src="resources/images/최근상품06.jpg" onclick="picAdd(5)"></td>
+			<td><img src="resources/images/최근상품07.jpg" onclick="picAdd(6)"></td>
+			<td><img src="resources/images/최근상품08.jpg" onclick="picAdd(7)"></td>
+			
+		</tr>
+	
+	</table>
+
+	<div class="alert" id=gallery>
+		<p id="txtBox" align="center" height= 20px width=70px><b>목록이<br> 없습니다</b></p>
+		<div class="picList" id=pic>
+		
+		</div>
+		
+	
+	</div>
+</div>
+</body>
+</html>
