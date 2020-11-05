@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test09</title>
+<script type="text/javascript">
+	function myFocus(){
+		document.getElementById("pw").focus()		
+	}
+	
+	function chk(){
+		put = document.getElementById("inPut").value;
+		document.getElementById("outPut").value=put;
+		document.getElementById("inPut").value="";
+		
+	}
+	
+	function goForward(){
+		window.history.forward()
+	}
+	function goBack(){
+		window.history.back()
+	}
+	
+	
+	function myClick(){
+		alert("안녕하세요. 환영합니다.")
+		
+		var result = confirm("처음 방문 입니까?")
+		if(result){
+			document.getElementById("myclick").innerHTML
+				= "처음 방문해 주셔서 감사합니다" 
+		} else{
+			document.getElementById("myclick").innerHTML
+			= "다시 방문해 주셔서 감사합니다" 
+		}
+	}
+	
+	function popup(){
+		
+		//새창 or 자기자신 창
+		//window.open("https://www.naver.com", "_self")		
+		
+		//사이즈 조정
+		//window.open("https://www.naver.com", "", "width=500, height=500")
+		
+		//popup.html생성하기
+		window.open("popup.html","","width=500, height=500")
+	}	
+	
+	function test(){
+		//if
+		//fo.submit()
+		location.href="https://www.naver.com"
+	
+	}
+	
+	
+	
+</script> </head> <body>
+
+<input type="button" value="naver" onclick="location.href='test02.html'">
+
+	<form id="fo" action="test01.html" method="get">
+		이름<input type="text" name="n"><br>
+		주소<input type="text" name="a"><br>
+		<input type="submit" value="submit">
+		<input type="button" value="btn" onclick="test()">
+	</form>
+
+<hr>
+	<input type="button" onclick="popup()" value="팝업"><br>
+<hr>
+
+	<input type="button" onclick="myClick()"><br>
+	<p id="myclick"></p>
+
+<hr>
+	<a href="test01.html">다음 페이지</a><br>
+	<button type="button" onclick = "goBack()">이전</button>
+	<button type="button" onclick = "goForward()">다음</button>
+	
+	
+<hr>
+	<input type="text" id="inPut" onchange="chk()"><br>
+	<input type="text" id="outPut"><br>
+	<input type="text"><br>
+<hr>
+
+<form>
+	<input type="text" maxlength="5" minlength="3"><br>
+	<input type="text" id="pw" ><br>
+	<input type="button" value="클릭"	 onclick="myFocus()">
+	<input type="submit" value="체크"	 >
+</form>	
+	
+	
+</body>
+</html>
