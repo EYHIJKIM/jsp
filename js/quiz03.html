@@ -14,11 +14,12 @@
 <script src="quiz.js"></script>
 	<script type="text/javascript">
 		var myImg;
+		
 		function mOverStopPic(obj){//사진위에 마우스 올릴 시
 			clearInterval(myImg)
 		}	
 
-		function autoPicNext(){			
+		function autoPicNext(){//사진 변경
 			myImg=setInterval(next,1000)
 		}	
 	
@@ -32,6 +33,7 @@
 
 	<input type="image" src="../CSS/resources/images/왼쪽화살표.jpg" 
 	 	onclick="previous()">
+	 	
 	<img id="img" src="../CSS/resources/images/test1.jpg" 
 		width="150px" height="150px"
 		onmouseover="mOverStopPic(this)" onmouseout="autoPicNext()"> 
