@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function mDown(obj){
+		obj.style.backgroundColor = "#1ec5e5";
+		obj.innerHTML = "Release Me";
+	}
+	
+	function mUp(obj){
+		obj.style.backgroundColor = "#D94A38";
+		obj.innerHTML = "Thank You";
+	}
+	function lighton(){
+		document.getElementById('myimage').src
+			= "resources/images/light_on.jpg"
+	}	
+	function lightoff(){
+		document.getElementById('myimage').src
+			= "resources/images/light_off.jpg"
+	}
+
+
+
+</script></head><body>
+	<div style="text-align:center;">
+		<img id="myimage" onmousedown="lighton()" onmouseup="lightoff()"
+		 src="resources/images/light_off.jpg" width="150" height="180">
+	</div>
+<hr>
+
+	<div onmousedown="mDown(this)" onmouseup = "mUp(this)"
+style="background-color: #d94a38; width: 90px; 
+height: 20px; padding: 40px;">
+Click Me</div>
+
+
+
+
+
+</body>
+</html>
