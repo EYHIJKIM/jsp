@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){ 
+		$("button.add").click(function(){
+			$("h1, h2, p").addClass("blue")
+			$("div").addClass("important")
+		})
+		$("button.remove").click(function(){ 
+			$("h1, h2, p").removeClass("blue")
+			$("div").removeClass("important")
+		})
+		$(".toggle").click(function(){
+			$("#02,#03,#04").toggleClass("red")
+			$("#01").css({"background-color":"yellow","color":"black"})
+		})
+	})
+</script>
+<style type="text/css">
+	.blue{ color: blue; }
+	.important{ font-weight: bold; font-size: 50pt; }
+	.red{ color:red;}
+</style>
+</head>
+<body>
+	<h1>HTML</h1> <h2>CSS</h2> <p>JS</p><div>java</div>
+	<button class="add">css적용</button>
+	<button class="remove">css해제</button>
+	<hr>
+	<button class="toggle">toggle 적용/해제</button>
+	<h1 id="01">html</h1>  <h2 id="02">test</h2>
+	<p id="03">aaa</p>     <div id="04">bbb</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
