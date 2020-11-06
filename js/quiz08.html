@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="jquery-3.5.1.min.js"></script>
+<script src="jquery-1.12.1-ui.js"></script>
+<script type="text/javascript">
+	
+	//리모콘 이동 함수
+	$(function(){
+		$("#remoter").draggable()
+	})
+
+	
+	//
+	
+	var title=50
+	var para=18
+	var size=15
+	$(function(){
+		$(".sizeUp").click(function(){
+			title *=1.2;
+			para *=1.2;
+			size +=3;
+			console.log("+ 클릭")
+			$(".title").css({ "font-size" : title+"px" })
+			$(".p1").css({ "font-size" : para+"px" })
+			$(".p2").css({ "font-size" : para+"px" })
+			$(".p3").css({ "font-size" : para+"px" })
+			
+			$("#size").text(size)
+			
+		})
+		
+		
+		$(".sizeDown").click(function(){
+			console.log("- 클릭")
+			title *= 0.8;
+			para *= 0.8;
+			size -=3;
+			$(".title").animate({ "font-size" : title+"px" })
+			$(".p1").animate({ "font-size" : para+"px" })
+			$(".p2").animate({ "font-size" : para+"px" })
+			$(".p3").animate({ "font-size" : para+"px" })
+			
+			$("#size").text(size)
+		})
+		
+		
+	})
+
+
+</script>
+
+<style type="text/css">
+	#batch{
+		display:flex;
+	}
+	
+	#remoter{
+		
+		width: 180px; height: 100px;
+		border:5px solid black;
+		display:flex; flex-flow: column;
+		background-color: white;
+	}
+	
+	.remoter_btn{
+		display:flex; flex-flow:row;
+		padding:10px;
+	}
+
+	img{ width: 50px; height: 50px}
+
+	#size{background-color: yellow; width: 50px;}
+	
+	#diary p{
+		font-size:15px;
+	}
+
+</style>
+</head>
+<body>
+<div id="batch">
+
+	<div id="diary">
+		<h1 class="title" style="font-size:50px;">오늘의 일기</h1>
+		<p class="p1">오늘 정말 졸려웠고 하기 싫었다</p>
+		<p class="p2">이제 한시간 남았으니까 힘내서 해야겠다</p>
+		<p class="p3">라고 할줄 알았냐??!~</p>
+	</div>
+	
+	<div id="remoter" align="center">
+		<span style="background-color:skyblue">리 모 콘</span>
+		<div class="remoter_btn">
+			<a href="#" class="sizeUp"><img src="resources/images/add.png"></a>
+			<p id="size">15</p>
+			<a href="#" class="sizeDown"><img src="resources/images/sub.jpg"></a>
+		</div>
+	</div>
+	
+
+	
+</div>
+</body>
+</html>
