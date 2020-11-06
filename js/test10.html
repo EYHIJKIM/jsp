@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.wrapper{display: flex; border:5px solid blue; width:900px;
+				height:600px; margin: 0 auto}
+	.light{order:1; width: 150px; height:300px; background: pink;}
+	.room{
+			order:2; width: 750px; height:600px; 
+			background-image:url("resources/images/room.jpg"); }
+	.room img{ width:750px; height: 600px}
+	.light img{width:120px;}
+	
+	
+	#dark{width:100%; height:600px; background:black; opacity:0;}
+	
+</style>
+
+<script>
+	var flag = true;
+	
+	function turnOff(){
+		var op
+		var path
+		
+		//스위치를 누르면 flag를 반대 값으로 바꿔준다.
+		flag = !flag
+		if(flag == true){
+			op = 0; path = "resources/images/switch_on.png"
+		} else{//불이 꺼졌을경우
+			//농도 조절
+			op = 0.8; path = "resources/images/switch_off.png"
+		}
+		//농도를 조절한 op값을 set해준다.
+		document.getElementById('dark').style.opacity = op
+		//이미지 변경
+		document.getElementById('sw').src = path		
+	}
+
+</script></head><body>
+	<div class="wrapper">
+		<div class="light">
+			<!-- 스위치를 클릭하면 turnOff()실행 -->
+			<img src="resources/images/switch_on.png" 
+				id="sw" onclick="turnOff()">
+		</div>
+		<div class="room"><div id="dark"></div> </div>
+	</div>
+
+
+
+
+
+
+
+</body>
+</html>
