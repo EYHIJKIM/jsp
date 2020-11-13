@@ -14,6 +14,8 @@
 
 <h1>안녕</h1>
 	<%
+	
+	request.setCharacterEncoding("utf-8");
 	//db랑 연결
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -23,6 +25,7 @@
 			
 			
 			String sql = "select id from members where id = ?";
+
 			PreparedStatement pstmt1 = con.prepareStatement(sql);
 			pstmt1.setString(1, request.getParameter("id"));	
 			

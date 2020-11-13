@@ -15,24 +15,30 @@
 	function loginFormChk(){
 		
 		flag = false;
-		flag2 = false;
-		msg = "perfect"
 		//필수입력 사항들 확인
-		if($("#id").val()==""){
+		
+		inputId = $("#id").val()
+		inputPw = $("#pwd").val()
+		inputPwChk = $("#pwdChk").val()
+		
+		//id텍스트창이 비어있으면
+		if(inputId==""){
 			alert("아이디는 필수 입력 사항입니다.")
 			$("#id").focus()
 			
-		}else if($("#pwd").val()==""){
+		//비밀번호 텍스트창이 비어있으면
+		}else if(inputPw==""){
 			alert("비밀번호는 필수 입력 사항입니다.")
 			$("#pwd").focus()
-			
+		
+		//필수사항을 다 입력했다면
 		} else{
-			
-			if($("#pwd").val()==$("#pwdChk").val()){
+			//비밀번호-비번확인이 똑같은지 확인.
+			if(inputPw==inputPwChk){
 				$("#chk").text("일치!")
 				flag = true;
 			} else{
-				$("#chk").text("불일치!")
+				$("#chk").text("불일치!").
 				flag = false;
 			}
 		}

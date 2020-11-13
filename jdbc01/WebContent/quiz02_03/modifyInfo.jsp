@@ -31,7 +31,6 @@
 		
 		pstmt.executeUpdate();
 
-		response.sendRedirect("main.jsp");
 	%>
 
 

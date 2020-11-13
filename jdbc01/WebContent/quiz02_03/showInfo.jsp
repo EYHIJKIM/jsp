@@ -13,7 +13,7 @@
 <body>
 <h1>회원 정보 수정 및 삭제</h1>
 	<%
-		String userId = (String)session.getAttribute("userId");
+		
 	
 	
 		Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -24,24 +24,35 @@
 		
 		String sql = "select * from members where id = ?";
 		PreparedStatement pstmt = con.prepareStatement(sql);
+		
+		String userId = (String)session.getAttribute("userId");
 		pstmt.setString(1, userId);
 		
 		ResultSet rs = pstmt.executeQuery();
 		
 		
-		while(rs.next()){
+		if(rs.next()){
 	%>
 
 <form action="modifyInfo.jsp" method="post">
-	아이디 : <input type="text" name = "id" value="<%=userId%>" readonly><br>
-	비밀번호 : <input type="text" name = "pwd" value="<%=rs.getString("pwd")%>"><br>
-	이름 : <input type="text" name="name" value="<%=rs.getString("name")%>"><br>
-	주소 : <input type="text" name="addr" value="<%=rs.getString("addr")%>"><br>
-	전화번호 : <input type="text" name="tel" value="<%=rs.getString("tel")%>"><br>
+
+	<table>
+		<tr><td align="right">아이디:</td> 
+		<td><input type="text" name = "id" value="<%=userId%>" readonly></td></tr>
+		<tr><td align="right">비밀번호:</td>
+			<td><input type="text" name = "pwd" value="<%=rs.getString("pwd")%>"></tr>
+		<tr><td align="right">이름:</td>
+			<td><input type="text" name="name" value="<%=rs.getString("name")%>"></td></tr>
+		<tr><td align="right">주소:</td>
+			<td><input type="text" name="addr" value="<%=rs.getString("addr")%>"></td></tr>
+		<tr><td align="right">전화번호:</td>
+			<td><input type="text" name="tel" value="<%=rs.getString("tel")%>"></td></tr>
+	</table>
 
 <input type="submit" value="수정">
+<input type="button" value="삭제" onclick="location.href='delete.jsp'">
 </form>
-<input type="button" value="삭제" onclick="location.href='logout.jsp'">
+
 
 
 

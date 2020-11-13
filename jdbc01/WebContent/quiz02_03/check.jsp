@@ -34,6 +34,7 @@
 
 	*/
 	
+		request.setCharacterEncoding("utf-8");
 	
 	//db랑 연결
 		Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -69,10 +70,10 @@
 					alert("비밀번호가 틀렸습니다.!")
 					location.href="login.jsp"
 				</script>
-
-				<%}
 				
-		} else{	%>
+				
+		<%}
+			}else{	%>
 				<script type="text/javascript">
 					alert("해당하는 아이디가 존재하지 않습니다!")
 					location.href="login.jsp"
