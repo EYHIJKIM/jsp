@@ -20,19 +20,6 @@
 		하루동안 열지 않음
 	</form>
 	
-	<script type="text/javascript">
-	
-
-		
-
-		
-	
-			
-		
-	
-	</script>
-	
-	
 	
 </body>
 </html>

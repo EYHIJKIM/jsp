@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,15 +11,14 @@
 
 	<%
 		Cookie cookie = new Cookie("chkTrue", "NoShow");
-		cookie.setMaxAge(10);
-		response.addCookie(cookie);
+	cookie.setMaxAge(10);
+	response.addCookie(cookie);
+	%>
 
-	%>	
-	
 	<script>
-		window.close();
+		indow.close();
 	</script>
-	
+
 
 
 </body>
