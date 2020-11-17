@@ -7,9 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<%@include file="../default/header.jsp" %>
 		
-	<%if(userId!=null){//세션이 존재한다면 %>
+	<%
+	if(userId!=null){//세션이 존재한다면 %>
 	<jsp:useBean id="dao" class="members.MemberDAO"/>
 	<jsp:useBean id="dto" class="members.MemberDTO"/>
 	
@@ -26,6 +28,11 @@
 		<input type="submit" value="완료">
 		<input type="button" value="취소" onclick="location.href='memberDetail.jsp?tableId=<%=tableId%>'">
 	</form>
+	
+	
+	
+	
+	
 		<%} else{ %>
 		<script type="text/javascript">
 			alert("잘못된 접근입니다");

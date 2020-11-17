@@ -36,11 +36,8 @@
 				</tr>
 
 			<%}%>
-
 	</table>
-	
 
-	
 	<%} else{ %>
 		<script type="text/javascript">
 			alert("잘못된 접근입니다");
